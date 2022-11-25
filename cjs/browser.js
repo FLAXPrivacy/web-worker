@@ -14,5 +14,5 @@
  * limitations under the License.
  */
 
-const WebWorker = Worker;
-module.exports = WebWorker;
+// const WebWorker = Worker;
+// export default WebWorker;
