@@ -88,7 +88,7 @@ function mainThread() {
 	 * @param {string} [options.name]  Available as `self.name` within the Worker
 	 * @param {string} [options.type="classic"]  Pass "module" to create a Module Worker.
 	 */
-	class Worker extends EventTarget {
+	class WebWorker extends EventTarget {
 		constructor(url, options) {
 			super();
 			const { name, type } = options || {};
@@ -127,8 +127,8 @@ function mainThread() {
 			this[WORKER].terminate();
 		}
 	}
-	Worker.prototype.onmessage = Worker.prototype.onerror = Worker.prototype.onclose = null;
-	return Worker;
+	WebWorker.prototype.onmessage = WebWorker.prototype.onerror = WebWorker.prototype.onclose = null;
+	return WebWorker;
 }
 
 function workerThread() {

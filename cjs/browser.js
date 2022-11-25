@@ -15,4 +15,4 @@
  */
 
 const WebWorker = Worker;
-export default WebWorker;
+module.exports = WebWorker;
